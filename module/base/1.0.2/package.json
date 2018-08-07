@@ -1,0 +1,13 @@
+
+{
+    "name": "Base",
+    "version": "1.0.2",
+    "keywords" : ["base"],
+    "repository": {
+        "url": "https://github.com/melonHuang/widgetcore",
+        "type": "git"
+    },
+    "maintainers": ["guagua <huangwei@360.cn>"],
+    "description": "基础类，提供Attribute, Aspect, Event等功能",
+    "output": "base.js"
+}

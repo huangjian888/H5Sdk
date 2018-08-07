@@ -1,0 +1,13 @@
+{
+    "name": "iscroll",
+    "version": "5.1.1",
+    "keywords" : ["util"],
+    "repository": {
+        "url": "https://github.com/cubiq/iscroll",
+        "type": "git"
+    },
+    "homepage": "http://iscrolljs.com/",
+    "maintainers": ["snadn <yangmao@360.cn>"],
+    "description": "滚动处理组件",
+    "output": "iscroll.js"
+}

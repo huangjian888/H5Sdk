@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jsUri</title>
+
+  <style type="text/css">
+    .cont { font-size: 12px; }
+    #txtUri { width: 600px; }
+  </style>
+
+  <script type="text/javascript" src="../Uri.js"></script>
+  <script type="text/javascript" src="../../../jquery/1.9.1/jquery.js"></script>
+
+</head>
+<body>
+	<div class="cont">
+		输入uri：
+		<input type="text" value="http://username:password@www.so.com:80/index.html?q=javascript&p=1&cat=0#fragment" id="txtUri" /> 
+		<input type="button" value="解析" id="btnParseuri" />		
+      	<table>
+      		<tr>
+      			<td>协议：</td>
+      			<td>
+      				<input type="text" id="txtProtocol" />
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>用户信息：</td>
+      			<td><input type="text" id="txtUserInfo"/></td>
+      		</tr>
+      		<tr>
+      			<td>主机：</td>
+      			<td><input type="text" id="txtHost"/></td>
+      		</tr>
+      		<tr>
+      			<td>端口：</td>
+      			<td><input type="text" id="txtPort"/></td>
+      		</tr>
+      		<tr>
+      			<td>文件路径：</td>
+      			<td><input type="text" id="txtFilePath"/></td>
+      		</tr>
+      		<tr>
+      			<td>查询字符串：</td>
+      			<td><input type="text" id="txtQuerykey"/></td>
+      		</tr>
+      		<tr>
+      			<td>锚点：</td>
+      			<td><input type="text" id="txtAnchor"/></td>
+      		</tr>
+      	</table>
+      	<input type="button" value="更新" id="btnUpdateUri" />
+	</div>
+
+	<script type="text/javascript">
+
+		var uri;
+		var parseUri = function(){
+			uri = new Uri( $('#txtUri').val() );
+
+			$('#txtProtocol').val( uri.protocol() );
+			$('#txtUserInfo').val( uri.userInfo() );
+			$('#txtHost').val( uri.host() );
+			$('#txtPort').val( uri.port() );
+			$('#txtFilePath').val( uri.path() );
+			$('#txtAnchor').val( uri.anchor() );
+			$('#txtQuerykey').val( uri.query() );
+		}
+		parseUri();
+
+		//构造uri，并解析各部分值
+		$('#btnParseuri').click( parseUri );
+
+		//更新值
+		$('#btnUpdateUri').click(function(){
+			 uri.setPath($('#txtFilePath').val())
+    			.setAnchor($('#txtAnchor').val())
+    			.setHost($('#txtHost').val())
+    			.setPort($('#txtPort').val())
+    			.setUserInfo($('#txtUserInfo').val())
+    			.setProtocol($('#txtProtocol').val());
+
+			$('#txtUri').val( uri.toString() );
+		});
+	</script>
+</body>
+</html>

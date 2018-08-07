@@ -1,0 +1,13 @@
+{
+	"name": "when.js",
+	"version": "2.7.0", 
+    "keywords" : ["util"],
+	"repository": {
+		"url": "https://github.com/cujojs/when", 
+		"type": "git"
+	},
+	"homepage": "https://github.com/cujojs/when", 
+	"maintainers": ["杨永乐 <yangyongle@360.cn>","黄薇 <huangwei@360.cn>"],
+	"description": "一个轻量级的Promises/A+和when()的实现。",
+	"output": "when.js"
+}

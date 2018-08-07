@@ -1,0 +1,115 @@
+
+<html >
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="360-fullscreen" content="true" />
+	<meta name="x5-page-mode" content="app" />
+	<meta name="browsermode" content="application" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-title" content="sdk.funcell123.com" />
+	<link rel="apple-touch-startup-image" href="http://p1.qhimg.com/d/inn/af1da7b7/startup.gif">
+	<link rel="apple-touch-startup-image" href="http://p8.qhimg.com/d/inn/03d22e77/startup_748x1024.gif" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:landscape)">
+	<link rel="apple-touch-startup-image" href="http://p2.qhimg.com/d/inn/598b81d1/startup_768x1004.gif" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:portrait)">
+	<title>游戏示例</title>
+
+</head>
+<body>
+
+	<a href="#" onclick="login();" >login</a>
+	<a href="#" onclick="funcellpay();" >pay</a>
+	<a href="#" onclick="logout();">logout</a>
+	<a href="#" onclick="loadScriptAsyn();">loadScriptAsyn</a>
+</body>
+</html>
+
+
+
+<!--<script src="http://web.iapppay.com/h5/v1.0.1/js/aibei_v1.1.0.js"></script>-->
+<!--<script src="http://zlzq-europe-auth.funcell.funcell123.com/authorize?callbackHandler=call"></script>-->
+
+<!-- <script src='http://h5game.u.360.cn/js/h5sdk.1.0.js'></script> -->
+<script>
+
+
+
+	function loadScriptAsyn() {
+        window.funcell_h5sdk.loadScriptAsyn("http://mainaland.h5-sdk.rejoy123.com/h5sdk/module/require/2.1.8/require.js",function (state,msg) {
+            console.log("state:"+state);
+            console.log("msg:"+msg);
+        },this);
+    }
+
+    function funcellpay() {
+        var payParameter = {};
+        var timestamp = (new Date()).valueOf();
+        payParameter.orderid = "order_"+timestamp;
+        payParameter.price = "99";
+        payParameter.ext_data = "ext_data";
+        payParameter.amount = "10";
+        payParameter.product_id = "100002";
+        payParameter.product_name = "10元宝";
+        payParameter.token = window.funcelltoken;
+        payParameter.create_time = timestamp;
+        window.funcell_h5sdk.pay(JSON.stringify(payParameter),function (ret) {
+
+        });
+    }
+
+    function logout() {
+//        window.funcell_h5sdk.logout(function (ret) {
+//            console.log(ret);
+//        });
+//        console.log(window.funcell_h5sdk.callFunction("test"));
+//        window.funcell_h5sdk.callFunction("logout",function (ret) {
+//            console.log(ret);
+//        });
+
+    }
+
+	function login(){
+        window.funcell_h5sdk.login(function (ret) {
+//			alert(ret);
+			console.log(ret);
+            var data = JSON.parse(ret);
+			window.funcelltoken = data.token;
+        });
+
+	}
+
+
+</script>
+
+
+<script src="http://mainaland.h5-sdk.rejoy123.com/h5sdk/module/require/2.1.8/require.js"></script>
+
+<script>
+    require.config({
+        'paths': {
+            'handlebars': 'http://mainaland.h5-sdk.rejoy123.com/h5sdk/module/handlebars/1.0.0/handlebars',
+            'jQuery': 'http://s0.qhimg.com/lib/jquery/1102',
+            'spin':'http://mainaland.h5-sdk.rejoy123.com/h5sdk/js/spin',
+            'funcellh5sdk':'../js/FuncellH5Sdk'
+//            'funcellh5sdk':'http://mainaland.h5-sdk.rejoy123.com/h5sdk/js/FuncellH5Sdk'
+        },
+        'packages': [],
+        'urlArgs': '',
+        waitSeconds: 0
+    });
+    require(['handlebars', 'jQuery','spin','funcellh5sdk'], function(handlebars, jQuery,Spinner,funcellh5sdk) {
+        window.funcell_h5sdk = funcellh5sdk;
+        var initParameter={
+            appid:"10000",
+			appkey:"f35y546ku5gd2aed562t5"
+		};
+        window.funcell_h5sdk.init(JSON.stringify(initParameter),function (msg) {
+            console.log(msg);
+        });
+    });
+
+
+</script>

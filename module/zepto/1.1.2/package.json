@@ -1,0 +1,13 @@
+{
+    "name": "Zepto",
+    "version": "1.1.2",
+    "keywords" : ["lib"],
+    "repository": {
+        "url": "https://github.com/madrobby/zepto",
+        "type": "git"
+    },
+    "homepage": "http://zeptojs.com/",
+    "maintainers": ["ququ <quguangyu@360.cn>"],
+    "description": "支持移动 webkit 浏览器的 JS 框架，语法与 jQuery 兼容。",
+    "output" : "zepto.js"
+}

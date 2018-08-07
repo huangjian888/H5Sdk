@@ -1,0 +1,8 @@
+{
+	"name": "store-xpc",
+	"version": "1.0.0", 
+    "keywords" : ["util"],
+	"maintainers": ["黄小璐 <huangxiaolu@360.cn>"],
+	"description": "跨浏览器加跨域的本地存储解决方案。",
+	"output": "store-xpc.js"
+}

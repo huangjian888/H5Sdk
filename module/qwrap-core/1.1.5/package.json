@@ -1,0 +1,13 @@
+{
+    "name": "QW.Core",
+    "version": "1.1.5",
+    "keywords": ["util"],
+    "repository": {
+        "url": "https://github.com/wedteam/qwrap",
+        "type": "git"
+    },
+    "homepage": "https://www.qwrap.com",
+    "maintainers": ["ququ <quguangyu@360.cn>"],
+    "description": "提供对 Array、String、Date、Object 的操作，及浏览器识别。",
+    "output": "qwrap.core.js"
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>H5</title>
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#4e8ef7">
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://mainaland.h5-sdk.rejoy123.com/h5sdk/css/style.css">
+    <link rel="stylesheet" href="http://mainaland.h5-sdk.rejoy123.com/h5sdk/css/app.css">
+    <link rel="stylesheet" href="http://mainaland.h5-sdk.rejoy123.com/h5sdk/css/main.css">
+
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <meta name="apple-mobile-web-app-title" content="sdk.funcell123.com" />
+</head>
+<body>
+
+<div class="login_content" id="login_content" >
+</div>
+</body>
+</html>
+
+<!-- 登录模板 -->
+<script type="text/x-handlebars-template" id="login_template">
+    <div class="mask1" id="login_mask">
+        <div class="main_box login_box" id="login_box">
+            <div id="head" class="box_header">
+                <h1>Funcell账号登录</h1>
+                <div class="close_button" id="login_exit_button"></div>
+            </div>
+            <section class="box_content">
+                <div class='box_content_item login_input_item login_header_input_item'>
+                    <input type="text" name="account" placeholder="请输入帐号" class="item_input_text" id="qt_account">
+                    <span class="item_input_label">账号</span>
+                    <span class="input_clear_button" id="input_clear_username" style="display:none"></span>
+                </div>
+                <div class='box_content_item login_input_item'>
+                    <input type="password" name="password" placeholder="请输入密码" class="item_input_text item_input_text_no_top" id="qt_password" maxlength="20">
+                    <span class="item_input_label">密码</span>
+                    <span class="input_clear_button" id="input_clear_password" style="display:none"></span>
+                </div>
+                <div class='box_content_item checkbox_item' style="display:none">
+                    <input type="checkbox" id="qtis_autologin" checked="checked" value="1">
+                    <label for="qtis_autologin">下次自动登录</label>
+                </div>
+                <div class='box_content_item buttons_item'>
+                    <button class='item_button half_button green_button' id="register_button">快速注册</button>
+                    <input type="submit" class="btn-big check-account item_button half_button red_button" value="立即登录" id="qt_btn">
+                </div>
+                <div class='box_content_item find_password_item'>
+                    <a id="funcell_findpwd" class="lnk">找回密码</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</script>
+
+<!-- 注册模板 -->
+<script type="text/x-handlebars-template" id="register_template">
+    <div class="mask1" id="register_mask">
+        <div class="main_box login_box" id="register_box">
+            <div class="box_header">
+                <h1>注册Funcell账号</h1>
+                <div class="close_button" id="login_return_button"></div>
+            </div>
+            <div class="box_content">
+                <div class='box_content_item login_input_item login_header_input_item'>
+                    <input type="text" name="account" placeholder="请输入帐号" class="item_input_text" id="qt_phone" maxlength="11">
+                    <span class="item_input_label">帐号</span>
+                    <span class="input_clear_button" id="input_clear_username" style="display:none"></span>
+                </div>
+                <div class='box_content_item login_input_item'>
+                    <input type="password" name="password" placeholder="请输入密码" class="item_input_text item_input_text_no_top" id="qt_mobile_password" maxLength="21">
+                    <span class="item_input_label">密码</span>
+                    <span class="input_clear_button" id="input_clear_password" style="display:none"></span>
+                </div>
+                <div class='box_content_item login_input_item'>
+                    <input type="password" name="password_confirm" placeholder="请确认密码" class="item_input_text item_input_text_no_top" id="qt_mobile_password_confirm" maxLength="21">
+                    <span class="item_input_label">确认</span>
+                    <span class="input_clear_button" id="input_clear_password_confirm" style="display:none"></span>
+                </div>
+                <div class="box_content_item checkbox_item">
+					<span class="confirm_clause_item">
+						<input type="checkbox" id="qt_mobile_agree" checked="checked" value="1">阅读并同意<a id="funcell_termsDetail" class="lnk">产品许可协议</a>
+					</span>
+                </div>
+                <div class="box_content_item buttons_item bottom_buttons_item">
+                    <input type="submit" class="item_button full_button red_button" value="快速登录" id="qt_mobile_reg">
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>-->
+<!--<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+<!--<meta content="telephone=no,email=no" name="format-detection" />-->
+<!--<meta name="full-screen" content="yes">-->
+<!--<meta name="x5-fullscreen" content="true" />-->
+<!--<meta name="360-fullscreen" content="true" />-->
+<!--<meta name="x5-page-mode" content="app" />-->
+<!--<meta name="browsermode" content="application" />-->
+<!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black" />-->
+<!--<meta name="apple-mobile-web-app-title" content="sdk.funcell123.com" />-->
+<!--<link rel="apple-touch-startup-image" href="http://p1.qhimg.com/d/inn/af1da7b7/startup.gif">-->
+<!--<link rel="apple-touch-startup-image" href="http://p8.qhimg.com/d/inn/03d22e77/startup_748x1024.gif" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:landscape)">-->
+<!--<link rel="apple-touch-startup-image" href="http://p2.qhimg.com/d/inn/598b81d1/startup_768x1004.gif" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:portrait)">-->

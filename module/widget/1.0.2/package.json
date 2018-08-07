@@ -1,0 +1,13 @@
+
+{
+    "name": "Widget",
+    "version": "1.0.2",
+    "keywords" : ["base"],
+    "repository": {
+        "url": "https://github.com/melonHuang/widgetcore",
+        "type": "git"
+    },
+    "maintainers": ["guagua <huangwei@360.cn>"],
+    "description": "组件基类，约定了组件的基本生命周期，并提供了代理，缓存，data-api等功能",
+    "output": "widget.js"
+}

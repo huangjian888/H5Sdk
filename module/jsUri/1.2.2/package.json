@@ -1,0 +1,13 @@
+{
+    "name": "jsUri",
+    "version": "1.2.2",
+    "keywords" : ["util"],
+    "repository": {
+        "url": "https://github.com/derek-watson/jsUri",
+        "type": "git"
+    },
+    "homepage": "https://github.com/derek-watson/jsUri",
+    "maintainers": ["安佳 <anjia@360.cn>"],
+    "description": "在js中，操作Uri和查询字符串。",
+    "output" : "Uri.js"
+}

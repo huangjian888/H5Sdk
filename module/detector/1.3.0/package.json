@@ -1,0 +1,8 @@
+{
+	"name": "Detector",
+	"version": "1.3.0", 
+    "keywords" : ["util"],
+	"maintainers": ["梁超 <liangchao@360.cn>"],
+	"description": "全面的客户端信息识别模块。",
+	"output": "detector.js"
+}

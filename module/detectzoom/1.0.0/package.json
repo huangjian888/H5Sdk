@@ -1,0 +1,13 @@
+{
+    "name": "detectzoom",
+    "version": "1.0.0",
+    "keywords" : ["util"],
+    "repository": {
+        "url": "https://github.com/yonran/detect-zoom",
+        "type": "git"
+    },
+    "homepage": "https://github.com/yonran/detect-zoom",
+    "maintainers": ["柏盼 <baipan@360.cn>"],
+    "description": "浏览器缩放检测",
+    "output": "detectzoom.js"
+}

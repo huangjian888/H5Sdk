@@ -1,0 +1,13 @@
+{
+    "name": "MD5",
+    "version": "1.0.3",
+    "keywords": ["util"],
+    "repository": {
+        "url": "https://github.com/blueimp/JavaScript-MD5",
+        "type": "git"
+    },
+    "homepage": "https://github.com/blueimp/JavaScript-MD5",
+    "maintainers": ["柏盼 <baipan@360.cn>"],
+    "description": "一个实现了 MD5 加密和 Hmac-MD5 加密的 JS 的模块",
+    "output": "md5.js"
+}
